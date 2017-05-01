@@ -1,0 +1,319 @@
+html {
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+
+header {
+  padding-top: 15vh; /* Padding top will be in % of the viewport height */
+  padding-bottom: 5vh;  /* Padding bottom is less than padding-top so that the icon at the bottom of the header will be closer to the bottom border of the header  */
+  background-image: url(http://il2.picdn.net/shutterstock/videos/1980856/thumb/1.jpg);
+  background-size: cover; /* full-screen backgrounds! */
+  text-align: center;    /* this is to put everything in the header in the centre. For more info, read http://www.w3schools.com/css/css_align.asp  */
+  font-family: garamond;
+  color: white;
+}
+
+
+header nav .fa {  /* Got the below 3 lines from stackoverflow, and change 'top' and 'left' to 29px, instead 0px because 0px will give no space to the left cornor at all.  The link to this page is http://stackoverflow.com/questions/18694439/how-to-position-an-element-at-the-top-left-corner-of-a-page-using-css   */
+    position: fixed;
+    top: 29px !important;
+    left: 29px !important;
+}
+
+
+/*header nav {*/
+/*    text-align: left;*/
+/*}*/
+
+
+header nav .fa:hover {  /* this will change the color of the thing at the top left corner of the header when it is hovered */
+    color: black;
+}
+
+
+h1 {
+  padding-bottom: 3vh; /*  this is to add space so that it won't be too close to the seperator line below it */
+}
+
+
+.separator {   
+    width: 5rem;
+    border-top: 2px solid white;  /*  This is where we make the separator line thicker or thinner */
+    margin: 0 auto;
+}
+
+
+p {
+  padding-top: 5vh;  /* this is to add space so that the 'p' part won't be too close to the seperator line above it  */
+  padding-bottom: 11vh;  /* this helps provide space between the text and anything below it */
+}
+
+
+/*header div .fa {*/
+  /*  padding-top: 15vh;  /* this helps provide space between the icon with the text above it  */
+    /*padding-bottom: 0;*/
+/*}*/
+
+
+header div .fa:hover {
+    color: black;
+}
+
+
+body {
+  /*The font-family property is _inherited_. This means that if we apply it to <body>, it will apply to all its children as well. This code sets the base font family for all the page. Because it's inherited, it can also be easily overridden with a simple CSS rule.*/
+  font-family: Pacifico, sans-serif;   /*this will set the font for everywhere in the body*/
+  font-size: 1em;
+  /*color: black;*/
+  font-size: 100%;
+}
+
+
+.intro {
+    padding-top: 15vh; /* Padding top will be in % of the viewport height */
+    padding-bottom: 15vh;
+    text-align: center; 
+}
+
+
+.intro-separator {
+    width: 5rem;
+    border-top: 2px solid black;  /*  This is where we make the separator line thicker or thinner */
+    margin: 0 auto;
+}
+
+
+h2 {
+  padding-bottom: 3vh;  /* this is to add space so that the 'h2' part won't be too close to the seperator line below it   */
+}
+
+
+.pure {
+    padding: 25vh 0; /* Padding top and bottom will be in % of the viewport height */
+    background-image: url(http://tarina.koupp.fi/wp-content/uploads/2016/05/pexels-photo-2-1.jpg);
+    background-size:100%;  /* need to add this line in order to fill the image in the whole div. Got this from http://stackoverflow.com/questions/11223585/how-to-stretch-the-background-image-to-fill-a-div  */
+    color: white;
+}
+
+
+.button {  /* regarding how to design a button, read   http://www.w3schools.com/css/css3_buttons.asp */
+    background-color: transparent;   /*  got this from http://stackoverflow.com/questions/22672368/how-to-make-a-transparent-html-button */
+    border: solid white;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 29px;
+}
+
+
+.button {  /* Use the transition-duration property to determine the speed of the "hover" effect. Got the below code from http://www.w3schools.com/css/css3_buttons.asp  */
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+
+.button:hover {
+  background-color: grey;
+}
+
+.work {
+  /*  padding-top: 15vh; /* Padding top will be in % of the viewport height */
+    /*padding-bottom: 15vh;*/
+    text-align: center; 
+}
+
+
+.navigator {
+  padding-top: 5vh;   /* this is just to add space between each navigator and the seperator line above it */ 
+}
+
+
+.work nav ul {
+  display: flex;
+  justify-content: center;
+  /*align-items: center;*/
+  list-style: none
+}
+
+
+.work nav ul li a {
+  margin: 0 0.5em;  /* this gives the space between each nav */
+  font-weight: 600;  /* this is where we adjust the boldness of the font */
+  color: #888;
+  text-decoration: none;  /* Remove the underline from each icon. If we don't have this, we will see each word underlined */
+}
+
+
+.work nav ul li a:hover {
+    color: black;
+}
+
+
+.pictures {
+  padding-left: 0; /* Reset a style that gets added by the browser to all ULs */
+  display: flex;
+  flex-wrap: wrap; /* If flexbox can't put elements next to each other, wrap them instead. */
+  justify-content: center;
+  list-style: none;
+}
+
+
+.pictures li {
+  width: 369px;   /* this is to set the width of each pic not to go pass or be more than this width */
+  height: 369px;
+  padding: 30px;  /* this gives the space between each pic */
+}
+
+
+img {  /*this is to set max width of the image to not be be bigger than its parent. If we don't have this, the picture can get bigger and overflow out to the right and the left */
+  max-width: 100%;  
+  max-height: 100%;  /* this will give each image the same height. If we don't have this. We won't get the same height for each pic */
+  /* If you want all images to be the same size, you need to also have the below 2 lines otherwise the pictures might not be all the same size. The below 2 lines are to make sure that they will all be the same size  */
+  width: 369px;   /* this is to set the width of each pic not to go pass or be more than this width */
+  height: 369px;
+}
+
+
+.show {
+  padding-top: 5vh;
+  padding-bottom: 10vh;  /* give this 10vh so that it will add more space between the 'show me more' box and the picture that follows*/
+}
+
+
+.button1 {  /* regarding how to design a button, read   http://www.w3schools.com/css/css3_buttons.asp */
+    background-color: white;
+    border: solid black;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 19px;
+}
+
+
+.button1 {  /* Use the transition-duration property to determine the speed of the "hover" effect. Got the below code from http://www.w3schools.com/css/css3_buttons.asp  */
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+
+.button1:hover {
+  background-color: grey;
+}
+
+
+.we-are-here {
+    padding: 25vh 0; /* Padding top and bottom will be in % of the viewport height */
+    background-image: url(http://il9.picdn.net/shutterstock/videos/9277847/thumb/1.jpg);
+    background-size:100%;  /* need to add this line in order to fill the image in the whole div. Got this from http://stackoverflow.com/questions/11223585/how-to-stretch-the-background-image-to-fill-a-div  */
+    color: white;
+}
+
+
+.our-clients {
+    padding-top:5vh;  /* added this to help fill the background colour to all the space on the top of this 'our clients' section. If we don't have this, it will leave some space between 'We are here to help' section and 'Our Clients' section */
+    background-color: AliceBlue;
+}
+
+
+.our-clients {
+  padding: 10vh 0; /* Padding top and bottom will be in % of the viewport height */
+}
+
+
+.clients ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;  /*  need to have this also because this will align all logos in the same line. If we don't have this 'align-items', some logos will be located higher or lower than another.*/
+  list-style: none;
+}
+
+
+.clients ul li img {
+  margin: 0 1em;  /* this gives the space between each */
+}
+
+
+.about-us {
+  text-align: center; 
+  padding: 10vh 0; /* Padding top and bottom will be in % of the viewport height */
+}
+
+
+.team-pics {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+
+.team-pics li {
+  margin-right: 2.5em;  /* this gives the space between each */
+  opacity: 0.4;   /*  this will make the pictures look fade from the beginning. For more information about opacity, read http://www.w3schools.com/css/css_image_transparency.asp*/
+    /*  got the below 5 lines from http://stackoverflow.com/questions/1747637/how-to-darken-an-image-on-mouseover */ 
+    -webkit-transition: all 0.5s linear;
+       -moz-transition: all 0.5s linear;
+        -ms-transition: all 0.5s linear;
+         -o-transition: all 0.5s linear;
+            transition: all 0.5s linear;
+            
+}
+
+/* also got the below from http://stackoverflow.com/questions/1747637/how-to-darken-an-image-on-mouseover, which is same place as where we got the code for the above 5 lines for '.team-pics li img', but adapt it a bit  */
+.team-pics li:hover {   
+    opacity: 1;  /*  this will make the pictures look darker when hovered over each picture. opacity:1 is fully opaque. For more information about opacity, read http://www.w3schools.com/css/css_image_transparency.asp*/
+}
+
+
+.team-pics li .text {  /* got the below code (the first 4 lines) from http://stackoverflow.com/questions/14149360/text-on-image-mouseover   But made an adjustment to the second line so that the text will appear on the image*/
+  position: relative;
+  bottom: 100px;   
+  left:0px;
+  visibility: hidden;  /*  this will set the pictures to be hidden at normal situation when it is not hovered*/
+  z-index: 2;   /*  this will bring the text to the front of the image instead of being behind the image. For more information, read http://www.w3schools.com/cssref/pr_pos_z-index.asp */
+  color: white;  /* could also set the font color in html , instead of doing it here */
+  }
+
+.team-pics li:hover .text {  /* also got the below code from http://stackoverflow.com/questions/14149360/text-on-image-mouseover   */
+  visibility: visible;  /* when hovered over the picture, the text will be visible */
+}
+
+
+.team-pics li .fa { /*   the code here is similar to what is in ".team-pics li .text" above */
+  bottom: 455px;   /* this is where we move the icon up and down. */
+  left:90px;    /* this is where we move the icon left and right.  */
+  position:relative;
+  visibility: hidden;
+  z-index: 2;
+}
+
+.team-pics li:hover .fa {  /*   the code here is similar to what is in ".team-pics li:hover .text" above */
+  visibility: visible;
+}
+
+
+.apply {  
+  padding-top: 2em;   /*  this is to give space between the button and the line above it  */
+}
+
+
+.apply-button {
+    background-color: white; 
+    border: solid black;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.apply-button:hover {
+  background-color: gold;
+}
