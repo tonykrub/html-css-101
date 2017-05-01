@@ -1,1 +1,325 @@
+html {
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
 
+/*.bg-image {*/
+/*    height: 95vh;*/
+/*    background: url("http://images.cityhdwallpapers.com/images/1920x1200/Brightly%20lighted%20New%20York%20City%20wallpaper.jpg") no-repeat center / cover;*/
+/*}*/
+
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+
+body {
+  /*The font-family property is _inherited_. This means that if we apply it to <body>, it will apply to all its children as well. This code sets the base font family for all the page. Because it's inherited, it can also be easily overridden with a simple CSS rule.*/
+  font-family: Pacifico, sans-serif;   /*this will set the font for everywhere in the body*/
+  font-size: 1em;
+  /*color: black;*/
+  font-size: 100%;
+  /*background-color: #778899;*/
+/*  margin-top: -29px;*/
+  background-color: #f6f6f6; /* super-light grey background, enough to not be completely white 
+  /*background-image: url("f.tqn.com/y/paranormal/1/W/c/O/2/184060520.jpg");*/
+}
+
+/*.top {*/
+/*  font-family: Pacifico, sans-serif;*/
+/*}*/
+
+header {
+  padding: 15vh 0; /* Padding top and bottom will be in % of the viewport height */
+  border-top: 5px solid #00cc66;  /* this is where we leave the thin green line on the very top of the page. Need to leave the green thin line on the very top because it is like this in the template00 for this exercise */
+  background-image: url(http://hdfreewallpaper.net/wp-content/uploads/2016/02/nice-profile-free-hd-wallpapers-for-fb.jpg);
+  background-size: cover; /* full-screen backgrounds! */
+}
+
+
+header h1 {
+  font-family: "Sacramento", cursive; /* This font comes from Google Fonts, added with a <link> tag in the HTML */
+  font-size: 6em;
+  color: DeepPink;  /* for list of colors, look at http://www.w3schools.com/cssref/css_colors.asp  */
+  font-weight:bold
+}
+
+
+header p1 {  /* could also write 'p1' without 'header'. That works as well */
+  font-family: "Pacifico", cursive;
+  font-size: 1.5em;
+  color: darkRed;
+  font-weight: bold
+}
+
+
+header .phone-icons {
+  display: flex; /* display each icon next to the other */
+  list-style: none; /* remove bullets next to list items */
+  padding-left: 0; /* UL elements get a default padding from the browser, this resets it */
+}
+
+
+header .phone-icons li {
+  margin: 0 0.2em; /* space each phone icon from each other */
+  color: greenYellow;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: rgba(0,0,0, 0.6); /* semi-transparent black background */
+}
+
+
+/* These styles will be applied only when the LI item is hovered */
+header .phone-icons li:hover {
+  background-color: #00cc66;
+}
+
+
+.selling-points {
+  padding: 2em 0; /* padding on top and bottom of selling points section */
+}
+
+
+/* Three selling points next to each other with flexbox, no bullets on the lists */
+.selling-points-list {
+  display: flex;
+  list-style: none;
+  text-align: center; /* Since everything is centered, this will help :) */
+}
+
+
+.selling-points-list li i.fa {
+  color: white;
+  width: 64px;
+  height: 64px;
+  /* The next 3 properties will center content in this circle */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto; /* Now that this icon is flexbox, it won't center like text. This centers it like a box */
+  border-radius: 50%;
+  font-size: 2em;
+  background-color: #00cc66; 
+}
+
+
+.selling-points-list h2 {
+  font-family: Pacifico, sans-serif;
+  color: black;
+}
+
+
+.selling-points-list p {
+  font-family: Pacifico, sans-serif;
+  color: darkSlateGray;
+}
+
+
+.selling-points-list li:hover {
+  background-color: paleGreen;
+}
+
+
+
+
+
+.about {
+  background-color: silver;
+  padding: 2em 0;
+}
+
+
+.about .flex-container {
+  display: flex;
+}
+
+
+.about .get_notified, .about .video {
+  width: 50%;
+}
+
+
+.about .get_notified {
+  padding: 2em;  /* adds some space to the right of the "Get Notified" subsection*/
+}
+
+
+/* this is where we do the Form styling! */
+.about .email-form {
+  display: flex;
+}
+
+.about .email-form input, .about .email-form button {
+  padding: 0.6em 1.2em;
+  border: 1px solid rgba(0,0,0, 0.3);
+}
+
+.about .email-form input {
+  border-top-left-radius: 10px;   /* put this here so that we can have the top left corner of the 'input' field that looks more like a circle instead of a square. Click 'run' to see how the corner of the 'input' field look like, by having this line here.*/
+  border-bottom-left-radius: 10px;  /* put this here so that we can have the bottom left corner of the 'input' field that looks more like a circle instead of a square. Click 'run' to see how the corner of the 'input' field look like, by having this line here.*/ 
+  border-right: none;
+}
+
+.about .email-form button {
+  border-top-right-radius: 10px;  /* put this here so that we can have the top right corner of the 'button' that looks more like a circle instead of a square. Click 'run' to see how the corner of the 'input' field look like, by having this line here.*/
+  border-bottom-right-radius: 10px;  /* put this here so that we can have the bottom right corner of the 'button' that looks more like a circle instead of a square. Click 'run' to see how the corner of the 'input' field look like, by having this line here.*/
+  border-left: none;
+  background-color: #00cc66; /* this is the color of the buttom */
+  color: white;   /* this is the color of the text inside the button */
+}
+
+/*
+For the below css about the video, Following the tutorial at https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php
+for responsive video!
+*/
+.about .video .videoWrapper {  /*the code for this is adapted from https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php*/
+  position: relative;
+  padding-bottom: 56.25%;
+}
+.about .video .videoWrapper iframe {   /*the code for this part is exactly from https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* The below 4 lines are included so that we can have the corners of the video that looks more like a circle instead of a square. Click 'run' to see how the corners of the video look like, by having these 4 lines below.*/
+  border-top-left-radius: 10px;   
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+
+
+
+
+.testimonials {
+  padding: 2em 0;  /* this also helps give space between the above section (which is the 'about' section), the below section and this testimonials section */
+}
+
+
+/* Testimonial should be at most 800px wide, and centered about the page */
+.testimonial {
+  max-width: 800px;
+  margin: 0 auto;    /* The margin for right and left is auto which means it will auto-adjust. This helps bring the text to the centre */
+  text-align: center;   /* This brings the text to the centre */
+}
+
+
+.testimonial-quote {
+  color: #888;
+}
+
+
+.testimonial-author {
+  font-weight: bold
+}
+
+
+.testimonial-pics {
+  padding-left: 0; /* Reset a style that gets added by the browser to all ULs */
+  display: flex;
+  flex-wrap: wrap; /* If flexbox can't put elements next to each other, wrap them instead. */
+  justify-content: center;
+  list-style: none;
+}
+
+
+.testimonial-pics li {
+  width: 36px;   /* this is to set the width of each pic not to go pass or be more than this width */
+  height: 36px;
+  padding-right: 1px;  /* this gives the space between each pic */
+}
+
+
+img {  /*this is to set max width of the image to not be be bigger than its parent. If we don't have this, the picture can get bigger and overflow out to the right and the left */
+  max-width: 100%;  
+  max-height: 100%;  /* this will give each image the same height. If we don't have this. We won't get the same height for each pic */
+  /* If you want all images to be the same size, you need to also have the below 2 lines otherwise the pictures might not be all the same size. The below 2 lines are to make sure that they will all be the same size  */
+  width: 36px;   /* this is to set the width of each pic not to go pass or be more than this width */
+  height: 36px;
+}
+
+.get-in-touch {
+  text-align: center   /* this brings everything to the middle */
+}
+
+
+.get-in-touch p {
+  color: #888;
+}
+
+
+.get-in-touch .social_icons {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+
+.get-in-touch .social_icons li {
+  color: white;
+  width: 32px;
+  height: 32px;
+  margin: 0 0.2em; /* Need to set margin because it will give space between each icon*/
+  /* The next 3 properties will center content (each icon) inside its circle */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #999;
+}
+
+
+.get-in-touch .social_icons li:hover {
+  background-color: #00cc66;
+}
+/*.image {*/
+/*  width: 30%;*/
+/*  padding-right: 0.5em;*/
+/*}*/
+
+
+
+
+
+footer {
+  background-color: gainsboro;
+  padding: 2em 0;  /* this will expand the area of the footer to the top and bottom of the text */
+}
+
+
+footer nav ul {
+  display: flex;
+  justify-content: center;
+  /*align-items: center;*/
+  list-style: none
+}
+
+
+footer nav ul li a {
+  margin: 0 0.5em;  /* this gives the space between each nav */
+  font-weight: 600;  /* this is where we adjust the boldness of the font */
+  color: #888;
+  text-decoration: none;  /* Remove the underline from each icon. If we don't have this, we will see each word underlined */
+}
+
+/* we could also do the footer like the below( without using ul and li in the html file), but we would not be able to put everything in the middle. Tried the below with Jerry but we could not get everything in the middle  */
+/*footer {*/
+/*  background-color: gainsboro;*/
+/*  padding: 2em 0;  /* this will expand the area of the footer to the top and bottom of the text */
+/*}*/
+/*footer nav a {*/
+/*  margin: 0 0.5em;  /* this gives the space between each nav */
+/*  font-weight: 600;  /* this is where we adjust the boldness of the font */
+/*  color: #888;*/
+/*  text-decoration: none;  /* Remove the underline from each icon. If we don't have this, we will see each word underlined */
+/*}*/
